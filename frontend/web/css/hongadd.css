@@ -1,0 +1,332 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 19, 2018, 2:35:09 AM
+    Author     : HTest
+*/
+.btn-grey {
+    color: #fff;
+    background-color: #A9A9A9;
+    border-color: #D3D3D3;
+}
+
+.btn-grey:focus,
+.btn-grey.focus {
+    color: #fff;
+    background-color: #A9A9A9;
+    border-color: #D3D3D3;
+}
+
+.btn-grey:hover {
+    color: #fff;
+    background-color: #A9A9A9;
+    border-color: #D3D3D3;
+}
+
+.btn-grey:active,
+.btn-grey.active,
+.open > .dropdown-toggle.btn-grey {
+    color: #fff;
+    background-color: #A9A9A9;
+    border-color: #D3D3D3;
+}
+
+.btn-grey:active:hover,
+.btn-grey.active:hover,
+.open > .dropdown-toggle.btn-grey:hover,
+.btn-grey:active:focus,
+.btn-grey.active:focus,
+.open > .dropdown-toggle.btn-grey:focus,
+.btn-grey:active.focus,
+.btn-grey.active.focus,
+.open > .dropdown-toggle.btn-grey.focus {
+    color: #fff;
+    background-color: #A9A9A9;
+    border-color: #D3D3D3;
+}
+
+.btn-grey:active,
+.btn-grey.active,
+.open > .dropdown-toggle.btn-grey {
+    background-image: none;
+}
+
+.btn-grey.disabled:hover,
+.btn-grey[disabled]:hover,
+fieldset[disabled] .btn-grey:hover,
+.btn-grey.disabled:focus,
+.btn-grey[disabled]:focus,
+fieldset[disabled] .btn-grey:focus,
+.btn-grey.disabled.focus,
+.btn-grey[disabled].focus,
+fieldset[disabled] .btn-grey.focus {
+    background-color: #A9A9A9;
+    border-color: #D3D3D3;
+}
+
+.btn-grey .badge {
+    color: #009688;
+    background-color: #fff;
+}
+
+.btn-grey:hover,
+.btn-grey:focus,
+.btn-grey.focus,
+.btn-grey:active,
+.open > .dropdown-toggle.btn-grey {
+    color: #fff;
+    background-color: #A9A9A9;
+    border-color: transparent;
+}
+
+.btn-grey:hover:hover,
+.btn-grey:focus:hover,
+.btn-grey.focus:hover,
+.btn-grey:active:hover,
+.open > .dropdown-toggle.btn-grey:hover,
+.btn-grey:hover:focus,
+.btn-grey:focus:focus,
+.btn-grey.focus:focus,
+.btn-grey:active:focus,
+.open > .dropdown-toggle.btn-grey:focus,
+.btn-grey:hover.focus,
+.btn-grey:focus.focus,
+.btn-grey.focus.focus,
+.btn-grey:active.focus,
+.open > .dropdown-toggle.btn-grey.focus {
+    color: #fff;
+    background-color: #A9A9A9;
+    border-color: transparent;
+}
+
+.btn-grey:active,
+.btn-grey.active,
+.open > .dropdown-toggle.btn-grey {
+    background-image: none;
+}
+
+.btn-grey.disabled,
+.btn-grey[disabled],
+fieldset[disabled] .btn-grey,
+.btn-grey.disabled:hover,
+.btn-grey[disabled]:hover,
+fieldset[disabled] .btn-grey:hover,
+.btn-grey.disabled:focus,
+.btn-grey[disabled]:focus,
+fieldset[disabled] .btn-grey:focus,
+.btn-grey.disabled.focus,
+.btn-grey[disabled].focus,
+fieldset[disabled] .btn-grey.focus,
+.btn-grey.disabled:active,
+.btn-grey[disabled]:active,
+fieldset[disabled] .btn-grey:active {
+    background-color: #A9A9A9;
+    border-color: #D3D3D3;
+}
+
+.btn-grey .badge {
+    color: #009688;
+    background-color: #fff;
+}
+
+
+.label-grey {
+    background-color: #A9A9A9;
+}
+
+.label-grey[href]:hover,
+.label-grey[href]:focus {
+    background-color: #C0C0C0;
+}
+
+.navbar-inverse {
+    color: #fff;
+    background-color: #26A69A !important;
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a,
+.nav li > form > button.logout {
+    color: #fff;
+}
+.m-t-5 {
+    margin-top: 5px;
+}
+.m-t-10 {
+    margin-top: 10px;
+}
+.m-t-25 {
+    margin-top: 25px;
+}
+.f-20 {
+    font-size: 20px;
+}
+.padding {
+    padding: 15px;
+}
+.m-l-5 {
+    margin-left: 5px;
+}
+.m-l-10 {
+    margin-left: 10px;
+}
+.m-l-15 {
+    margin-left: 15px;
+}
+.m-l-25 {
+    margin-left: 25px;
+}
+.m-b-5 {
+    margin-bottom: 5px;
+}
+.m-b-10 {
+    margin-bottom: 10px;
+}
+.m-b-15 {
+    margin-bottom: 15px;
+}
+.m-b-25 {
+    margin-bottom: 25px;
+}
+
+.table-responsive {
+    border: 0px !important;
+}
+
+.btn:not(.btn-link) {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.m-btn {
+    bottom: 50px;
+    right: 20px !important;
+    z-index: 11;
+    position: fixed !important;
+}
+
+.btn-float {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 46px !important;
+    background-color: #E91E63 !important;
+}
+.btn-float:not(.bgm-white):not(.bgm-gray) > i {
+    color: #fff;
+}
+
+@media screen and (max-device-width: 480px) {
+    .progress-div {
+        width: 100%;
+        margin-bottom: 25px;
+        border-bottom: 1px #eee solid;
+    }
+    #searchString {
+        width: 200px !important;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .progress-div {
+        width: 50%;
+        margin-bottom: 25px;
+        border-bottom: 1px #eee solid;
+    }
+    #searchString {
+        width: 200px !important;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 979px) {
+    .progress-div {
+        width: 33%;
+        margin-bottom: 25px;
+    }
+    #searchString {
+        width: 200px !important;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .progress-div {
+        width: 25%;
+        margin-bottom: 25px;
+    }
+    #searchString {
+        width: 300px !important;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .progress-div {
+        width: 25%;
+        margin-bottom: 25px;
+    }
+    #searchString {
+        width: 300px !important;
+    }
+}
+.progress-div {
+    border-right: 1px #eee solid;
+    float: left;
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+.progress-div h4 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.list-group-item-danger {
+    color: #fff !important;
+    background-color: #EF5350;
+}
+.list-group-item-primary {
+    color: #fff !important;
+    background-color: #EF5350;
+}
+.list-group-item-info {
+    color: #fff !important;
+    background-color: #29B6F6;
+}
+.list-group-item-default {
+    background-color: #eee;
+}
+.list-group-item-success {
+    color: #fff !important;
+    background-color: #66BB6A;
+}
+.list-group-item-warning {
+    color: #fff !important;
+    background-color: #ff8a50;
+}
+a.list-group-item:hover {
+    color: #444 !important;
+}
+.list-group .list-group-item {
+    border-bottom: 1px solid #ddd !important;
+}
+.badge-danger {
+    color: #fff !important;
+    background-color: #EF5350;
+}
+.badge-primary {
+    color: #fff !important;
+    background-color: #EF5350;
+}
+.badge-info {
+    color: #fff !important;
+    background-color: #29B6F6;
+}
+.badge-default {
+    background-color: #777;
+}
+.badge-success {
+    color: #fff !important;
+    background-color: #66BB6A;
+}
+.badge-warning {
+    color: #fff !important;
+    background-color: #ff8a50;
+}

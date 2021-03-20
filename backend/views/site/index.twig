@@ -1,0 +1,26 @@
+{{ use('/yii/widgets/ActiveForm') }}
+{{ use('yii/helpers/Url') }}
+
+{{ set(this, 'title', 'Bugtracker Backend') }}
+
+<div class="site-index">
+
+    <div class="jumbotron">
+        <h1>Bugtracker Backend</h1>
+        <h1>{{ Url.base(true) }}</h1>
+        <p><a class="btn btn-lg btn-success" href="/">Goto Frontend</a></p>
+    </div>
+
+    <div class="body-content">
+
+        <h4>Console Actions</h4>
+
+        {% for items in fullList %}
+            {% for item in items %}
+                <div class="col-sm-2">
+                    {{ item }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,165 @@
+<?php
+
+use common\models\User;
+use common\models\CrmRecord;
+use yii\grid\GridView;
+?>
+
+<?=
+
+GridView::widget([
+    'dataProvider' => $dataProvider,
+    'tableOptions' => [
+        'class' => 'table table-striped table-condensed',
+    ],
+    'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => ''],
+    'columns' => [
+        'id',
+        ['label' => 'Priority',
+            'attribute' => 'idpriority',
+            'format' => 'raw',
+            'value' => function($model) {
+                $priority = Priority::find()
+                        ->where(['id' => $model->idpriority])
+                        ->one();
+                if ($model->idpriority <> 4) {
+                    switch ($model->idpriority) {
+                        case 1:
+                        case 2:
+                            $cssClass = 'danger';
+                            break;
+                        case 3:
+                            $cssClass = 'warning';
+                            break;
+                        case 4:
+                            $cssClass = 'primary';
+                            break;
+                        case 5:
+                            $cssClass = 'success';
+                            break;
+                        case 6:
+                            $cssClass = 'default';
+                            break;
+                    }
+                    return "<label class='label label-$cssClass'>{$priority->priority_name}</label>";
+                } else {
+                    return '';
+                }
+            }
+        ],
+        ['label' => 'Path',
+            'attribute' => 'idassignee',
+            'format' => 'raw',
+            'value' => function($model) {
+                if ($model->created_by == Yii::$app->user->identity->id) {
+                    $from = "You";
+                } else {
+                    $from = $model->createdBy->name();
+                }
+                $assignee = CrmRecord::getAssignee($model->idassignee);
+                if ($assignee) {
+                    if ($model->idassignee == Yii::$app->user->identity->id) {
+                        $to = "You";
+                    } else {
+                        $to = $assignee->name();
+                    }
+                    return "<label class='label label-primary'>$from to $to";
+                } else {
+                    return null;
+                }
+            }
+        ],
+        ['label' => 'Progress',
+            'attribute' => 'idprogress',
+            'format' => 'raw',
+            'value' => function($model) {
+                $progress = Progress::find()
+                        ->where(['id' => $model->idprogress])
+                        ->one();
+                if ($progress) {
+                    $css = Progress::getProgressCss($progress);
+                    return "<label class='label label-$css'>" . $progress->progress_name . "</label>";
+                } else {
+                    return null;
+                }
+            }
+        ],
+        ['label' => 'Subejct',
+            'attribute' => 'subject',
+            'format' => 'raw',
+            'value' => function($model) {
+                if ($model) {
+                    $out = strlen($model->subject) > 80 ? substr($model->subject, 0, 80) . "..." : $model->subject;
+                } else {
+                    $out = null;
+                }
+                $return = "<a href='#' class='text-primary' onclick='toggleActivityModal(\"#activity-modal\", {$model->id})' .
+                        >$out</a>";
+                return $return;
+            }
+        ],
+        ['label' => 'Category',
+            'attribute' => 'idcrm_record_cat',
+            'value' => function($model) {
+                $TaskCategory = TaskCategory::find()->
+                                where(['id' => $model->idcrm_record_cat])->one();
+                return $TaskCategory->task_name_eng;
+            }
+        ],
+        ['label' => 'Client',
+            'attribute' => 'idclient',
+            'value' => function($model) {
+                $client = ClientSite::find()
+                        ->where(['id' => $model->idclient])
+                        ->one();
+                if ($client) {
+                    return $client->client_name;
+                } else {
+                    return null;
+                }
+            }
+        ],
+        ['label' => 'Created at',
+            'value' => function($model) {
+                $created_at = Yii::$app->formatter->asDate($model->created_at, 'yyyy-MM-dd');
+                if ($created_at) {
+                    return $created_at;
+                } else {
+                    return null;
+                }
+            }
+        ],
+        ['label' => 'Last Activity',
+            'value' => function($model) {
+                if ($model) {
+                    if ($model->lastCrmActivity) {
+                        return Yii::$app->formatter->asDate($model->lastCrmActivity->created_at, 'yyyy-MM-dd');
+                    }
+                }
+                return null;
+            }
+        ],
+        ['label' => 'Last Update',
+            'format' => 'raw',
+            'value' => function($model) {
+                if ($model) {
+                    if ($model->lastCrmActivity) {
+                        $username = User::getUsername($model->lastCrmActivity->created_by);
+                        if ($model->lastCrmActivity->created_by == Yii::$app->user->identity->id) {
+                            return "<label class='label label-primary'>You</label>";
+                        } else {
+                            return $username;
+                        }
+                    }
+                }
+                return null;
+            }
+        ],
+        ['class' => 'yii\grid\ActionColumn',
+            'template' => '{update}',
+            'visible' => (User::getIsAdmin($user)),
+        ],
+        ['class' => 'yii\grid\ActionColumn', 'template' => '{delete}'],
+    ],
+]);
+?>

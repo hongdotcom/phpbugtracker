@@ -1,0 +1,76 @@
+2018-07-02 05:28:26 [::1][4][guutvv39fgi5bckrfjjpmksk94][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\ifap\bugtracker\backend\web\views\site\index.php in C:\ifap\bugtracker\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\ifap\bugtracker\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\ifap\\bugtrac...', Array, Object(backend\controllers\SiteController))
+#1 C:\ifap\bugtracker\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#2 C:\ifap\bugtracker\backend\controllers\SiteController.php(69): yii\base\Controller->render('index', Array)
+#3 [internal function]: backend\controllers\SiteController->actionIndex()
+#4 C:\ifap\bugtracker\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\ifap\bugtracker\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\ifap\bugtracker\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\ifap\bugtracker\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/index', Array)
+#8 C:\ifap\bugtracker\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\ifap\bugtracker\backend\web\index.php(21): yii\base\Application->run()
+#10 {main}
+2018-07-02 05:28:26 [::1][4][guutvv39fgi5bckrfjjpmksk94][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => 'dab8d89c741b23945577faeafa1c0b93adbb8b35fc7a379046be6e343e1a0c71a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[4,\"VuyKwG3TEV-JOIkoWu9Cxt26HvQzMmrh\",2592000]\";}'
+    'advanced-frontend' => 'r0mpncte5o8ai3odcrko98q4a5'
+    '_csrf-frontend' => 'c111ca4a6fef905c3d1137c2fada5c8540af3386408ea2cc95bd6605b1f69d2aa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"DrDFoUeAl8oRmEx9C2i2H43l0iKG2lpO\";}'
+    'advanced-backend' => 'guutvv39fgi5bckrfjjpmksk94'
+    '_identity-backend' => '020855cbec0a4f7730725cfc67259b195e73c98c820ae277ec42e2ba6d3a77d9a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[4,\"VuyKwG3TEV-JOIkoWu9Cxt26HvQzMmrh\",2592000]\";}'
+    '_csrf-backend' => 'c7a5a6fdf04f4644dabf0dbc4e05138bf7ec2478558bec5a91ab769972afcbf1a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zIRHRLuTcs3bl9fVOEzc-51QA73UIz_w\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+    '__id' => 4
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bugtracker.localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,zh-TW;q=0.8,zh;q=0.7,zh-CN;q=0.6'
+    'HTTP_COOKIE' => '_identity-frontend=dab8d89c741b23945577faeafa1c0b93adbb8b35fc7a379046be6e343e1a0c71a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B4%2C%22VuyKwG3TEV-JOIkoWu9Cxt26HvQzMmrh%22%2C2592000%5D%22%3B%7D; advanced-frontend=r0mpncte5o8ai3odcrko98q4a5; _csrf-frontend=c111ca4a6fef905c3d1137c2fada5c8540af3386408ea2cc95bd6605b1f69d2aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22DrDFoUeAl8oRmEx9C2i2H43l0iKG2lpO%22%3B%7D; advanced-backend=guutvv39fgi5bckrfjjpmksk94; _identity-backend=020855cbec0a4f7730725cfc67259b195e73c98c820ae277ec42e2ba6d3a77d9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B4%2C%22VuyKwG3TEV-JOIkoWu9Cxt26HvQzMmrh%22%2C2592000%5D%22%3B%7D; _csrf-backend=c7a5a6fdf04f4644dabf0dbc4e05138bf7ec2478558bec5a91ab769972afcbf1a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zIRHRLuTcs3bl9fVOEzc-51QA73UIz_w%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.27 (Win64) PHP/7.0.23 Server at bugtracker.localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.27 (Win64) PHP/7.0.23'
+    'SERVER_NAME' => 'bugtracker.localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/ifap/bugtracker'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/ifap/bugtracker'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/ifap/bugtracker/backend/web/index.php'
+    'REMOTE_PORT' => '4766'
+    'REDIRECT_URL' => '/backend/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1530509306.3
+    'REQUEST_TIME' => 1530509306
+]
